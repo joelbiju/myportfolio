@@ -561,6 +561,66 @@ main {
 
 
 /**
+ * #myskills 
+ */
+
+ .myskills { margin-bottom: 35px; }
+
+ .myskills-title { margin-bottom: 20px; }
+ 
+ .myskills-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+ }
+ 
+ .myskills-item {
+   position: relative;
+   background: var(--border-gradient-onyx);
+   padding: 20px;
+   border-radius: 14px;
+   box-shadow: var(--shadow-2);
+   z-index: 1;
+   flex: 1 1 calc(25% - 20px); /* Adjust this value based on the desired item width and gap */
+ }
+ 
+ .myskills-item::before {
+   content: "";
+   position: absolute;
+   inset: 1px;
+   background: var(--bg-gradient-jet);
+   border-radius: inherit;
+   z-index: -1;
+ }
+ 
+ .myskills-icon-box {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.myskills-icon-box img {
+  max-height: 40px; /* Ensure all images are of the same height */
+  margin: auto;
+  display: block; /* Ensure image behaves like a block element */
+  position: relative; /* Ensure overlay positions correctly */
+}
+ 
+ .myskills-content-box { text-align: center; }
+ 
+ .myskills-item-title { margin-bottom: 7px; }
+ 
+ .myskills-item-text {
+   color: var(--light-gray);
+   font-size: var(--fs-6);
+   font-weight: var(--fw-3);
+   line-height: 1.6;
+ }
+ 
+
+/**
  * #testimonials 
  */
 
@@ -723,6 +783,17 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+  .testimonials-avatar-box img {
+    width: 50px; /* Adjust the width as needed */
+  }
+
+  .padded-image {
+    width: 60px;
+  }
 }
 
 
